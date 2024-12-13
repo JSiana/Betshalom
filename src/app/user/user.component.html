@@ -1,0 +1,17 @@
+<section>
+@if(isLoggedIn){
+  <p>Bienvenido, {{ username }}</p>
+  <img
+  (click)="greet()"
+  src="https:github.com/jsiana.png"
+  alt="phonto">
+
+} @else {
+  <p>Inicia sesion</p>
+  <button (click)="isLoggedIn = true">Iniciar sesion</button>
+}
+
+<app-games username="{{username}}"></app-games>
+
+</section>
+
